@@ -18,10 +18,9 @@ const swiperOptions = {
     992: { slidesPerView: 3.7, spaceBetween: 20 },
     1200: { slidesPerView: 4, spaceBetween: 20 },
   },
-  autoplay: { delay: 3000, pauseOnMouseEnter: true },
 };
 
-[".cat1-cards", ".cat2-cards", ".cat3-cards", ".cat4-cards", ".cat5-cards", ".cat6-cards", ".cat7-cards", ".testi"].forEach((selector) => {
+[".cat1-cards", ".cat2-cards", ".cat3-cards", ".cat4-cards", ".cat5-cards", ".cat6-cards", ".cat7-cards", ".cat8-cards"].forEach((selector) => {
   const swiper = new Swiper(selector, {
     ...swiperOptions,
     navigation: {
@@ -29,4 +28,13 @@ const swiperOptions = {
       prevEl: `${selector}-left`,
     },
   });
+});
+
+const testiSwiper = new Swiper('.cat8-cards', {
+  ...swiperOptions,
+  navigation: {
+    nextEl: `${selector}-right`,
+    prevEl: `${selector}-left`,
+  },
+  autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
