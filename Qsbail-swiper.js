@@ -24,8 +24,8 @@ const swiperOptions = {
   const swiper = new Swiper(selector, {
     ...swiperOptions,
     navigation: {
-      nextEl: `${selector}-right`,
-      prevEl: `${selector}-left`,
+      nextEl: `#${selector}-right`,
+      prevEl: `#${selector}-left`,
     },
   });
 });
