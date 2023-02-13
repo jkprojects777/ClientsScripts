@@ -20,7 +20,7 @@ const swiperOptions = {
   },
 };
 
-[".cat1-cards", ".cat2-cards", ".cat3-cards", ".cat4-cards", ".cat5-cards", ".cat6-cards", ".cat7-cards", ".cat8-cards"].forEach((selector) => {
+[".cat1-cards", ".cat2-cards", ".cat3-cards", ".cat4-cards", ".cat5-cards", ".cat6-cards", ".cat7-cards"].forEach((selector) => {
   const swiper = new Swiper(selector, {
     ...swiperOptions,
     navigation: {
@@ -30,7 +30,7 @@ const swiperOptions = {
   });
 });
 
-const testiSwiper = new Swiper('.cat8-cards', {
+const swiper = new Swiper('.cat8-cards', {
   ...swiperOptions,
   navigation: {
       nextEl: `#${selector.replace('.', '')}-right`,
