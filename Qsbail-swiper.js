@@ -1,36 +1,3 @@
-var swiperNodes="",
-    pagination="<div class=swiper-pagination></div>",
-    next_prev_buttons='<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>',
-    scrollbar='<div class="swiper-scrollbar"></div>',
-    swiperNodes=swiperNodes.concat(pagination,next_prev_buttons);
-$(".swiper").each(function(e){$(this).append(swiperNodes)});
-
-function initSwiper(selector, navId) {
-  var swiper = new Swiper(selector, {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: navId + ' .swiper-button-next',
-      prevEl: navId + ' .swiper-button-prev',
-    },
-    pagination: {
-      el: navId + ' .swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-      }
-    }
-  });
-}
-
-var swiperNodes="",
-    pagination="<div class=swiper-pagination></div>",
-    next_prev_buttons='<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>',
-    scrollbar='<div class="swiper-scrollbar"></div>',
-    swiperNodes=swiperNodes.concat(pagination,next_prev_buttons);
-$(".swiper").each(function(e){$(this).append(swiperNodes)});
 var mySwiper=new Swiper(".cat1-cards",{
   mousewheel:!1,
   autoHeight:!1,
@@ -156,3 +123,47 @@ var mySwiper=new Swiper(".cat1-cards",{
         820:{slidesPerView:2.7,spaceBetween:20},
         992:{slidesPerView:3.7,spaceBetween:20},
         1200:{slidesPerView:4,spaceBetween:20}}});
+        var mySwiper = new Swiper ('.testi', {
+            mousewheel: false,
+            autoHeight: false,
+          forceToAxis: false,
+          loop: true,
+          speed: 1200,
+          freeMode: false,
+          centeredSlides: true,
+          centeredSlidesBounds: true,
+          lazy: false,
+          navigation: {
+            nextEl: '#testi-right',
+            prevEl: '#testi-left',
+          },
+          keyboard: {
+            enabled: true,
+        },
+          breakpoints: {
+                  0: {
+              slidesPerView: 1.2,
+              spaceBetween: 10,
+            },
+                  479: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+                  820: {
+              slidesPerView: 2.7,
+              spaceBetween: 20,
+            },
+                  992: {
+              slidesPerView: 3.7,
+              spaceBetween: 20,
+            },      
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          },
+          autoplay: {
+            delay: 3000,
+            pauseOnMouseEnter: true
+          },
+        })    
