@@ -30,11 +30,11 @@ const swiperOptions = {
   });
 });
 
-const swiper = new Swiper('.cat8-cards', {
+const testiswiper = new Swiper('.cat8-cards', {
   ...swiperOptions,
   navigation: {
-      nextEl: `#${selector.replace('.', '')}-right`,
-      prevEl: `#${selector.replace('.', '')}-left`,
+      nextEl: `#cat8-cards-right`,
+      prevEl: `#cat8-cards-left`,
   },
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
