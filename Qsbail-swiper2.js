@@ -24,8 +24,8 @@ const swiperOptions = {
   const swiper = new Swiper(selector, {
     ...swiperOptions,
     navigation: {
-      nextEl: `#${selector}-right`,
-      prevEl: `#${selector}-left`,
+      nextEl: `#${selector.replace('.', '')}-right`,
+      prevEl: `#${selector.replace('.', '')}-left`,
     },
   });
 });
@@ -33,8 +33,8 @@ const swiperOptions = {
 const testiSwiper = new Swiper('.cat8-cards', {
   ...swiperOptions,
   navigation: {
-    nextEl: `#${selector}-right`,
-    prevEl: `#${selector}-left`,
+      nextEl: `#${selector.replace('.', '')}-right`,
+      prevEl: `#${selector.replace('.', '')}-left`,
   },
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
