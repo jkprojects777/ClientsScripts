@@ -33,8 +33,8 @@ const swiperOptions = {
 const testiSwiper = new Swiper('.cat8-cards', {
   ...swiperOptions,
   navigation: {
-    nextEl: `${selector}-right`,
-    prevEl: `${selector}-left`,
+    nextEl: `#${selector}-right`,
+    prevEl: `#${selector}-left`,
   },
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
