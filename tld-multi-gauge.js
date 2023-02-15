@@ -1,9 +1,9 @@
-function createGauge(containerSelector, value) {
+function drawGauge(containerSelector, value) {
 const backgroundColor = "#1a2d52";
 const barColor = "#334465";
 const textColor = "#ffffff";
 
-const container = d3.select('containerSelector');
+const container = d3.select(containerSelector);
 const width = container.node().getBoundingClientRect().width;
 const height = width;
 const radius = Math.min(width, height) / 2;
@@ -88,9 +88,11 @@ const drawGaugeAnimated = (value) => {
       };
     });
 };
-}
+};
 
-createGauge('#gauge-container-1', 96);
-createGauge('#gauge-container-2', 85);
-createGauge('#gauge-container-3', 100);
-createGauge('#gauge-container-4', 100);
+setTimeout(function() {
+drawGauge('#gauge-container-1', 96);
+drawGauge('#gauge-container-2', 85);
+drawGauge('#gauge-container-3', 100);
+drawGauge('#gauge-container-4', 100);
+}, 0);
