@@ -90,6 +90,7 @@ const drawGaugeAnimated = (value) => {
 };
 }
 
-createGauge('#gauge-container-1', 75);
-createGauge('#gauge-container-2', 40);
-createGauge('#gauge-container-3', 90);
+createGauge('#gauge-container-1', 96);
+createGauge('#gauge-container-2', 85);
+createGauge('#gauge-container-3', 100);
+createGauge('#gauge-container-4', 100);
