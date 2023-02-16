@@ -1,6 +1,6 @@
 function drawGauge(containerSelector, value) {
 const backgroundColor = "#1a2d52";
-const barColor = "#334465";
+const barColor = "#00ccff";
 const textColor = "#ffffff";
 
 const container = d3.select(containerSelector);
