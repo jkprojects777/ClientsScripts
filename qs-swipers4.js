@@ -45,3 +45,15 @@ const jobswiper=new Swiper(".cat9-cards",{
   },
   loop:!1
 });
+
+
+// Récupération des items de la collection "cat9-cards"
+const cat9Cards = webflowCMS("cat9-cards").items;
+
+// Vérification si la collection ne contient aucun item
+if (cat9Cards.length === 0) {
+  // Récupération de l'élément .swiper-comp.jobs
+  const jobsSwiperComp = document.querySelector(".swiper-comp.jobs");
+  // Mise à jour du style de l'élément pour le cacher
+  jobsSwiperComp.style.display = "none";
+}
