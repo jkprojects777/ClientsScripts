@@ -18,7 +18,7 @@ const swiperOptions={
   }
 };
 
-[".cat1-cards",".cat2-cards",".cat3-cards",".cat4-cards",".cat5-cards",".cat6-cards",".cat7-cards"]
+[".cat1-cards",".cat2-cards",".cat3-cards",".cat4-cards",".cat5-cards",".cat6-cards",".cat7-cards",".cat9-cards" ]
   .forEach(e=>{new Swiper(e,{
     ...swiperOptions,navigation:{
       nextEl:`#${e.replace(".","")}-right`,
