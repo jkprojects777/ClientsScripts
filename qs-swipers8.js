@@ -18,7 +18,7 @@ const swiperOptions={
   }
 };
 
-[".cat1-cards",".cat2-cards",".cat3-cards",".cat4-cards",".cat5-cards",".cat6-cards",".cat7-cards"]
+[".cat1-cards",".cat2-cards",".cat3-cards",".cat4-cards",".cat5-cards",".cat6-cards",".cat7-cards",".cat9-cards"]
   .forEach(e=>{new Swiper(e,{
     ...swiperOptions,navigation:{
       nextEl:`#${e.replace(".","")}-right`,
@@ -37,14 +37,5 @@ const testiswiper=new Swiper(".cat8-cards",{
     pauseOnMouseEnter:!0
   }
 });
-
-const jobswiper=new Swiper(".cat9-cards",{
-  ...swiperOptions,navigation:{
-    nextEl:"#cat9-cards-right",
-    prevEl:"#cat9-cards-left"
-  },
-  loop:!1
-});
-
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
