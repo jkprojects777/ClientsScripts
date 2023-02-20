@@ -34,10 +34,7 @@ const testiswiper=new Swiper(".cat8-cards",{
     nextEl:"#cat8-cards-right",
     prevEl:"#cat8-cards-left"
   },
-  autoplay:{
-    delay:3e3,
-    pauseOnMouseEnter:!0
-  }
+  autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
 
 const jobswiper=new Swiper(".cat9-cards",{
