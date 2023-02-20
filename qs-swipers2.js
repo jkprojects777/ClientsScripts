@@ -36,7 +36,7 @@ const testiswiper=new Swiper(".cat8-cards",{
     delay:3e3,
     pauseOnMouseEnter:!0
   }
-});^
+});
 
 const jobswiper=new Swiper(".cat9-cards",{
   ...swiperOptions,navigation:{
