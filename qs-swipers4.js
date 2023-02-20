@@ -51,7 +51,7 @@ const jobswiper=new Swiper(".cat9-cards",{
 const cat9Cards = webflowCMS("cat9-cards").items;
 
 // Vérification si la collection ne contient aucun item
-if (cat9Cards.length === 0) {
+if (cat9Cards.length === 1) {
   // Récupération de l'élément .swiper-comp.jobs
   const jobsSwiperComp = document.querySelector(".swiper-comp.jobs");
   // Mise à jour du style de l'élément pour le cacher
