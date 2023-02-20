@@ -47,11 +47,11 @@ const jobswiper=new Swiper(".cat9-cards",{
 });
 
 
-// Récupération des items de la collection "cat9-cards"
-const cat9Cards = webflowCMS("cat9-cards").items;
+// Récupération des éléments de la collection "cat9-cards"
+const cat9Cards = window.Webflow.collect(`items/${window.Webflow.siteId}/cat9-cards`);
 
-// Vérification si la collection ne contient aucun item
-if (cat9Cards.length === 1) {
+// Vérification si la collection ne contient aucun élément
+if (cat9Cards.length === 0) {
   // Récupération de l'élément .swiper-comp.jobs
   const jobsSwiperComp = document.querySelector(".swiper-comp.jobs");
   // Mise à jour du style de l'élément pour le cacher
