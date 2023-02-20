@@ -44,5 +44,4 @@ const jobswiper=new Swiper(".cat9-cards",{
     prevEl:"#cat9-cards-left"
   },
   loop:!1
-  }
 });
