@@ -42,14 +42,4 @@ const testiswiper=new Swiper(".cat8-cards",{
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
 
-// Toto custom
-
-const totoswiper=new Swiper(".cat9-cards",{
-  ...swiperOptions,navigation:{
-    nextEl:"#cat9-cards-right",
-    prevEl:"#cat9-cards-left"
-  },
-  loop:false
-});
-
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
