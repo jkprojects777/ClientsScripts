@@ -44,32 +44,33 @@ const testiswiper=new Swiper(".cat8-cards",{
 
 // Job custom
 
-let cloneNumber;
-$('.cat9-cards').find('div[aria-label*="/"]').each(function() {
-  var ariaLabel = $(this).attr('aria-label');
+let cloneNumbers;
+jQuery('.cat9-cards').find('div[aria-label*="/"]').each(function() {
+  var ariaLabel = jQuery(this).attr('aria-label');
   var fraction = ariaLabel.match(/(\d+)\s*\/\s*(\d+)/);
 
   if (fraction !== null && fraction[2] !== undefined) {
     var secondNumber = fraction[2];
     switch (secondNumber) {
       case '1':
-        cloneNumber = 4;
+        cloneNumbers = 4;
         break;
       case '2':
-        cloneNumber = 3;
+        cloneNumbers = 3;
         break;
       case '3':
-        cloneNumber = 2;
+        cloneNumbers = 2;
         break;
       case '4':
-        cloneNumber = 1;
+        cloneNumbers = 1;
         break;
       case '5':
-        cloneNumber = 0;
+        cloneNumbers = 0;
         break;
       default:
-        cloneNumber = null;
+        cloneNumbers = null;
     }
+    console.log("secondNumber = ", secondNumber, " cloneNumbers = ", cloneNumbers);
   }
 });
 
@@ -81,7 +82,7 @@ const jobswiper = new Swiper(".cat9-cards", {
     nextEl: "#cat9-cards-right",
     prevEl: "#cat9-cards-left",
   },
-  loopAdditionalSlides: cloneNumber
+  loopAdditionalSlides: cloneNumbers
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
