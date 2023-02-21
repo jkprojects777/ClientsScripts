@@ -1,3 +1,4 @@
+// Options
 const swiperOptions={
   mousewheel: false,
   autoHeight: false,
@@ -20,6 +21,8 @@ const swiperOptions={
   }
 };
 
+// Init all globals
+
 [".cat1-cards",".cat2-cards",".cat3-cards",".cat4-cards",".cat5-cards",".cat6-cards",".cat7-cards"]
   .forEach(e=>{new Swiper(e,{
     ...swiperOptions,navigation:{
@@ -29,6 +32,8 @@ const swiperOptions={
   })
 });
 
+// Testi custom
+
 const testiswiper=new Swiper(".cat8-cards",{
   ...swiperOptions,navigation:{
     nextEl:"#cat8-cards-right",
@@ -37,14 +42,48 @@ const testiswiper=new Swiper(".cat8-cards",{
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
 
-const jobswiper=new Swiper(".cat9-cards",{
-  ...swiperOptions,navigation:{
-    nextEl:"#cat9-cards-right",
-    prevEl:"#cat9-cards-left"
+// Jobs custom
+
+const jobSwiperBreakpoints = {
+  0: {
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    loopFillGroupWithBlank: 0,
   },
-  loop:false,
-  centeredSlides: true,
-  centeredSlidesBounds: false
+  479: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    slidesPerGroup: 2,
+    loopFillGroupWithBlank: 0,
+  },
+  820: {
+    slidesPerView: 2.7,
+    spaceBetween: 20,
+    slidesPerGroup: 2,
+    loopFillGroupWithBlank: 0,
+  },
+  992: {
+    slidesPerView: 3.7,
+    spaceBetween: 20,
+    slidesPerGroup: 3,
+    loopFillGroupWithBlank: 4,
+  },
+  1200: {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    slidesPerGroup: 3,
+    loopFillGroupWithBlank: 4,
+  },
+};
+
+const jobswiper = new Swiper(".cat9-cards", {
+  ...swiperOptions,
+  navigation: {
+    nextEl: "#cat9-cards-right",
+    prevEl: "#cat9-cards-left",
+  },
+  breakpoints: jobSwiperBreakpoints,
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
