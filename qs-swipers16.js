@@ -42,48 +42,13 @@ const testiswiper=new Swiper(".cat8-cards",{
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
 
-// Jobs custom
-
-const jobSwiperBreakpoints = {
-  0: {
-    slidesPerView: 1.5,
-    spaceBetween: 10,
-    slidesPerGroup: 1.5,
-    loopFillGroupWithBlank: 0.5,
-  },
-  479: {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    slidesPerGroup: 2,
-    loopFillGroupWithBlank: 1,
-  },
-  820: {
-    slidesPerView: 2.5,
-    spaceBetween: 20,
-    slidesPerGroup: 2.5,
-    loopFillGroupWithBlank: 1.5,
-  },
-  992: {
-    slidesPerView: 3.5,
-    spaceBetween: 20,
-    slidesPerGroup: 3.5,
-    loopFillGroupWithBlank: 2.5,
-  },
-  1200: {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    slidesPerGroup: 4,
-    loopFillGroupWithBlank: 3,
-  },
-};
-
 const jobswiper = new Swiper(".cat9-cards", {
   ...swiperOptions,
   navigation: {
     nextEl: "#cat9-cards-right",
     prevEl: "#cat9-cards-left",
   },
-  breakpoints: jobSwiperBreakpoints,
+  loopAdditionalSlides: 3
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
