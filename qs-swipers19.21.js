@@ -45,11 +45,24 @@ const testiswiper=new Swiper(".cat8-cards",{
 // Testi custom
 
 const jobsswiper=new Swiper(".cat9-cards",{
-  ...swiperOptions,navigation:{
+  slidesPerView:1,
+  spaceBetween:10,
+  mousewheel: false,
+  autoHeight: false,
+  forceToAxis: false,
+  loop: true,
+  speed: 1200,
+  freeMode: false,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  lazy: false,
+  keyboard: {
+    enabled: true,
+  },
+  navigation:{
     nextEl:"#cat9-cards-right",
     prevEl:"#cat9-cards-left"
-  },
-  breakpoints:{0:{slidesPerView:1,spaceBetween:10}}
+  }
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
