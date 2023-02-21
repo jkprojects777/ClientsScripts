@@ -46,10 +46,10 @@ const testiswiper=new Swiper(".cat8-cards",{
 
 const jobSwiperBreakpoints = {
   0: {
-    slidesPerView: 1.2,
+    slidesPerView: 1.5,
     spaceBetween: 10,
-    slidesPerGroup: 1.2,
-    loopFillGroupWithBlank: 0.2,
+    slidesPerGroup: 1.5,
+    loopFillGroupWithBlank: 0.5,
   },
   479: {
     slidesPerView: 2,
@@ -58,16 +58,16 @@ const jobSwiperBreakpoints = {
     loopFillGroupWithBlank: 1,
   },
   820: {
-    slidesPerView: 2.7,
+    slidesPerView: 2.5,
     spaceBetween: 20,
-    slidesPerGroup: 2.7,
-    loopFillGroupWithBlank: 1.7,
+    slidesPerGroup: 2.5,
+    loopFillGroupWithBlank: 1.5,
   },
   992: {
-    slidesPerView: 3.7,
+    slidesPerView: 3.5,
     spaceBetween: 20,
-    slidesPerGroup: 3.7,
-    loopFillGroupWithBlank: 2.7,
+    slidesPerGroup: 3.5,
+    loopFillGroupWithBlank: 2.5,
   },
   1200: {
     slidesPerView: 4,
