@@ -44,13 +44,13 @@ const testiswiper=new Swiper(".cat8-cards",{
 
 // Job custom
 
+let cloneNumbers;
 $('.cat9-cards').find('div[aria-label*="/"]').each(function() {
   var ariaLabel = $(this).attr('aria-label');
   var fraction = ariaLabel.match(/(\d+)\s*\/\s*(\d+)/);
 
   if (fraction !== null && fraction[2] !== undefined) {
     var secondNumber = fraction[2];
-    let cloneNumbers;
     switch (secondNumber) {
       case '1':
         cloneNumbers = 4;
@@ -70,8 +70,10 @@ $('.cat9-cards').find('div[aria-label*="/"]').each(function() {
       default:
         cloneNumbers = null;
     }
+    console.log("secondNumber = ", secondNumber, " cloneNumbers = ", cloneNumbers);
   }
 });
+
 
 
 const jobswiper = new Swiper(".cat9-cards", {
