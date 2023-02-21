@@ -23,7 +23,7 @@ const swiperOptions={
 
 // Init all globals
 
-[".cat1-cards",".cat2-cards",".cat3-cards",".cat4-cards",".cat5-cards",".cat6-cards",".cat7-cards"]
+[".cat1-cards",".cat2-cards",".cat3-cards",".cat4-cards",".cat5-cards",".cat6-cards",".cat7-cards",".cat9-cards"]
   .forEach(e=>{new Swiper(e,{
     ...swiperOptions,navigation:{
       nextEl:`#${e.replace(".","")}-right`,
@@ -40,49 +40,6 @@ const testiswiper=new Swiper(".cat8-cards",{
     prevEl:"#cat8-cards-left"
   },
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
-});
-
-// Job custom
-var secondNumber;
-$('.cat9-cards').find('div[aria-label*="/"]').each(function() {
-  var ariaLabel = $(this).attr('aria-label');
-  var fraction = ariaLabel.match(/(\d+)\s*\/\s*(\d+)/);
-
-  if (fraction !== null && fraction[2] !== undefined) {
-    var secondNumber = fraction[2];
-  }
-});
-
-// Clone numbers
-
-let cloneNumbers;
-switch (secondNumber) {
-  case 1:
-    cloneNumbers = 20;
-    break;
-  case 2:
-    cloneNumbers = 20;
-    break;
-  case 3:
-    cloneNumbers = 20;
-    break;
-  case 4:
-    cloneNumbers = 20;
-    break;
-  case 5:
-    cloneNumbers = 20;
-    break;
-  default:
-    cloneNumbers = null; // cas par défaut si la valeur de "secondNumber" n'est pas gérée
-}
-
-const jobswiper = new Swiper(".cat9-cards", {
-  ...swiperOptions,
-  navigation: {
-    nextEl: "#cat9-cards-right",
-    prevEl: "#cat9-cards-left",
-  },
-  loopAdditionalSlides: 20
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
