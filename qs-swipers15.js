@@ -48,32 +48,32 @@ const jobSwiperBreakpoints = {
   0: {
     slidesPerView: 1.2,
     spaceBetween: 10,
-    slidesPerGroup: 1,
-    loopFillGroupWithBlank: 0,
+    slidesPerGroup: 1.2,
+    loopFillGroupWithBlank: 0.2,
   },
   479: {
     slidesPerView: 2,
     spaceBetween: 20,
     slidesPerGroup: 2,
-    loopFillGroupWithBlank: 0,
+    loopFillGroupWithBlank: 1,
   },
   820: {
     slidesPerView: 2.7,
     spaceBetween: 20,
-    slidesPerGroup: 2,
-    loopFillGroupWithBlank: 0,
+    slidesPerGroup: 2.7,
+    loopFillGroupWithBlank: 1.7,
   },
   992: {
     slidesPerView: 3.7,
     spaceBetween: 20,
-    slidesPerGroup: 3,
-    loopFillGroupWithBlank: 4,
+    slidesPerGroup: 3.7,
+    loopFillGroupWithBlank: 2.7,
   },
   1200: {
     slidesPerView: 4,
     spaceBetween: 20,
-    slidesPerGroup: 3,
-    loopFillGroupWithBlank: 4,
+    slidesPerGroup: 4,
+    loopFillGroupWithBlank: 3,
   },
 };
 
