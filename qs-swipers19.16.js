@@ -49,8 +49,7 @@ const totoswiper=new Swiper(".cat9-cards",{
     nextEl:"#cat9-cards-right",
     prevEl:"#cat9-cards-left"
   },
-  slidesPerGroup: 6,
-  loopFillGroupWithBlank: true
+  loop:false
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
