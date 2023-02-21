@@ -42,4 +42,14 @@ const testiswiper=new Swiper(".cat8-cards",{
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
 
+// Testi custom
+
+const jobsswiper=new Swiper(".cat9-cards",{
+  ...swiperOptions,navigation:{
+    nextEl:"#cat9-cards-right",
+    prevEl:"#cat9-cards-left"
+  },
+  breakpoints : 0{slidesPerView:1.2,spaceBetween:10}
+});
+
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
