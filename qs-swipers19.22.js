@@ -45,7 +45,7 @@ const testiswiper=new Swiper(".cat8-cards",{
 // Testi custom
 
 const jobsswiper=new Swiper(".cat9-cards",{
-  slidesPerView:1,
+  slidesPerView:1.5,
   spaceBetween:10,
   mousewheel: false,
   autoHeight: false,
