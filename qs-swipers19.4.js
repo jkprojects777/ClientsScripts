@@ -44,7 +44,7 @@ const testiswiper=new Swiper(".cat8-cards",{
 
 // Job custom
 
-let cloneNumbers;
+var cloneNumbers;
 jQuery('.cat9-cards').find('div[aria-label*="/"]').each(function() {
   var ariaLabel = jQuery(this).attr('aria-label');
   var fraction = ariaLabel.match(/(\d+)\s*\/\s*(\d+)/);
@@ -73,8 +73,6 @@ jQuery('.cat9-cards').find('div[aria-label*="/"]').each(function() {
     console.log("secondNumber = ", secondNumber, " cloneNumbers = ", cloneNumbers);
   }
 });
-
-
 
 const jobswiper = new Swiper(".cat9-cards", {
   ...swiperOptions,
