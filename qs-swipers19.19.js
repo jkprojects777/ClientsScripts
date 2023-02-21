@@ -49,7 +49,7 @@ const jobsswiper=new Swiper(".cat9-cards",{
     nextEl:"#cat9-cards-right",
     prevEl:"#cat9-cards-left"
   },
-  breakpoints : 0{slidesPerView:1.2,spaceBetween:10}
+  breakpoints : 0:{slidesPerView:1.2,spaceBetween:10}
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
