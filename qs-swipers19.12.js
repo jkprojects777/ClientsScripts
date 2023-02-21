@@ -82,7 +82,7 @@ const jobswiper = new Swiper(".cat9-cards", {
     nextEl: "#cat9-cards-right",
     prevEl: "#cat9-cards-left",
   },
-  loopAdditionalSlides: cloneNumbers
+  loopAdditionalSlides: 20
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
