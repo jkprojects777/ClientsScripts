@@ -43,7 +43,7 @@ const testiswiper=new Swiper(".cat8-cards",{
 });
 
 // Job custom
-
+var secondNumber;
 $('.cat9-cards').find('div[aria-label*="/"]').each(function() {
   var ariaLabel = $(this).attr('aria-label');
   var fraction = ariaLabel.match(/(\d+)\s*\/\s*(\d+)/);
