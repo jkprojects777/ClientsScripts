@@ -42,40 +42,6 @@ const testiswiper=new Swiper(".cat8-cards",{
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
 
-// Job custom
-var secondNumber;
-$('.cat9-cards').find('div[aria-label*="/"]').each(function() {
-  var ariaLabel = $(this).attr('aria-label');
-  var fraction = ariaLabel.match(/(\d+)\s*\/\s*(\d+)/);
-
-  if (fraction !== null && fraction[2] !== undefined) {
-    var secondNumber = fraction[2];
-  }
-});
-
-// Clone numbers
-
-let cloneNumbers;
-switch (secondNumber) {
-  case 1:
-    cloneNumbers = 4;
-    break;
-  case 2:
-    cloneNumbers = 3;
-    break;
-  case 3:
-    cloneNumbers = 2;
-    break;
-  case 4:
-    cloneNumbers = 1;
-    break;
-  case 5:
-    cloneNumbers = 0;
-    break;
-  default:
-    cloneNumbers = null; // cas par défaut si la valeur de "secondNumber" n'est pas gérée
-}
-
 const jobswiper = new Swiper(".cat9-cards", {
   ...swiperOptions,
   navigation: {
