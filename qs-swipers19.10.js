@@ -61,7 +61,7 @@ switch (secondNumber) {
     cloneNumbers = 4;
     break;
   case 2:
-    cloneNumbers = 3;
+    cloneNumbers = 4;
     break;
   case 3:
     cloneNumbers = 2;
