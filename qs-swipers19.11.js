@@ -58,19 +58,19 @@ $('.cat9-cards').find('div[aria-label*="/"]').each(function() {
 let cloneNumbers;
 switch (secondNumber) {
   case 1:
-    cloneNumbers = 4;
+    cloneNumbers = 20;
     break;
   case 2:
-    cloneNumbers = 4;
+    cloneNumbers = 20;
     break;
   case 3:
-    cloneNumbers = 2;
+    cloneNumbers = 20;
     break;
   case 4:
-    cloneNumbers = 1;
+    cloneNumbers = 20;
     break;
   case 5:
-    cloneNumbers = 0;
+    cloneNumbers = 20;
     break;
   default:
     cloneNumbers = null; // cas par défaut si la valeur de "secondNumber" n'est pas gérée
