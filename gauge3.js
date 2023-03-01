@@ -1,6 +1,6 @@
 function drawGauge(containerSelector, value) {
   const backgroundColor = "#ffffff";
-  const textColor = "#6c6efe";
+  const textColor = "url(#textGradient)";
 
   const container = d3.select(containerSelector);
   const width = container.node().getBoundingClientRect().width;
@@ -62,45 +62,59 @@ function drawGauge(containerSelector, value) {
     .attr('fill', 'url(#gradient)')
     .attr('transform', `translate(${width/2}, ${height/2})`);
 
+  const textGradient = svg.append("defs")
+    .append("linearGradient")
+    .attr("id", "textGradient")
+    .attr("x1", "0%")
+    .attr("y1", "0%")
+    .attr("x2", "100%")
+    .attr("y2", "0%");
+
+  textGradient.selectAll("stop")
+    .data(gradientStops)
+    .enter().append("stop")
+    .attr("offset", d => `${d.offset * 100}%`)
+    .attr("stop-color", d => d.color);
+
   const text = svg.append('text')
-    .attr('text-anchor', 'middle')
-    .attr('dy', '0.35em')
-    .attr('fill', textColor)
-    .style('font-size', fontSize + 'px')
-    .attr('transform', `translate(${width/2}, ${height/2})`);
+  .attr('text-anchor', 'middle')
+.attr('dy', '0.35em')
+.attr('fill', textColor)
+.style('font-size', fontSize + 'px')
+.attr('transform', translate(${width/2}, ${height/2}));
 
-  let isAnimated = false;
+let isAnimated = false;
 
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5
-  };
+const options = {
+root: null,
+rootMargin: '0px',
+threshold: 0.5
+};
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !isAnimated) {
-        drawGaugeAnimated(value);
-        isAnimated = true;
-      } else if (!entry.isIntersecting) {
-        isAnimated = false;
-      }
-    });
-  }, options);
+const observer = new IntersectionObserver((entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting && !isAnimated) {
+drawGaugeAnimated(value);
+isAnimated = true;
+} else if (!entry.isIntersecting) {
+isAnimated = false;
+}
+});
+}, options);
 
-  observer.observe(container.node());
+observer.observe(container.node());
 
-  const drawGaugeAnimated = (value) => {
-    const interpolate = d3.interpolate(0, angleScale(value));
-    bar.transition()
-      .duration(1500)
-      .attrTween('d', d => {
-    return t => {
-      d.endAngle = interpolate(t);
-      return arc(d);
-    };
-  });
-
+const drawGaugeAnimated = (value) => {
+const interpolate = d3.interpolate(0, angleScale(value));
+bar.transition()
+.duration(1500)
+.attrTween('d', d => {
+return t => {
+d.endAngle = interpolate(t);
+return arc(d);
+};
+});
+  
 text.transition()
   .duration(1500)
   .tween('text', () => {
@@ -109,7 +123,7 @@ text.transition()
       text.text(Math.round(interpolate(t)) + '%');
     };
   });
- };
+  };
 };
 
 setTimeout(function() {
@@ -117,5 +131,5 @@ drawGauge('#gauge-container-1', 96);
 drawGauge('#gauge-container-2', 85);
 drawGauge('#gauge-container-3', 100);
 drawGauge('#gauge-container-4', 100);
-}, 0);   
-
+}, 0);
+  
