@@ -1,5 +1,5 @@
 function drawGauge(containerSelector, value) {
-const backgroundColor = "#ecf0f3";
+const backgroundColor = "#ffffff";
 const barColor = "#6c6efe";
 const textColor = "#6c6efe";
 
