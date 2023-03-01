@@ -36,7 +36,7 @@ function drawGauge(containerSelector, value) {
 
   const colorScale = d3.scaleLinear()
     .domain([0, 1])
-    .range(['#272265', '#f78b45']);
+    .range(['#272265', '#8a3574', '#f7ac39']);
 
   const gradient = svg.append("defs")
     .append("linearGradient")
@@ -75,32 +75,32 @@ function drawGauge(containerSelector, value) {
     root: null,
     rootMargin: '0px',
     threshold: 0.5
-};
+  };
 
-const observer = new IntersectionObserver((entries, observer) => {
-entries.forEach(entry => {
-if (entry.isIntersecting && !isAnimated) {
-drawGaugeAnimated(value);
-isAnimated = true;
-} else if (!entry.isIntersecting) {
-isAnimated = false;
-}
-});
-}, options);
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !isAnimated) {
+        drawGaugeAnimated(value);
+        isAnimated = true;
+      } else if (!entry.isIntersecting) {
+        isAnimated = false;
+      }
+    });
+  }, options);
 
-observer.observe(container.node());
+  observer.observe(container.node());
 
-const drawGaugeAnimated = (value) => {
-const interpolate = d3.interpolate(0, angleScale(value));
-bar.transition()
-.duration(1500)
-.attrTween('d', d => {
-return t => {
-d.endAngle = interpolate(t);
-return arc(d);
-};
-});
-  
+  const drawGaugeAnimated = (value) => {
+    const interpolate = d3.interpolate(0, angleScale(value));
+    bar.transition()
+      .duration(1500)
+      .attrTween('d', d => {
+    return t => {
+      d.endAngle = interpolate(t);
+      return arc(d);
+    };
+  });
+
 text.transition()
   .duration(1500)
   .tween('text', () => {
@@ -109,7 +109,7 @@ text.transition()
       text.text(Math.round(interpolate(t)) + '%');
     };
   });
-  };
+ };
 };
 
 setTimeout(function() {
@@ -117,5 +117,5 @@ drawGauge('#gauge-container-1', 96);
 drawGauge('#gauge-container-2', 85);
 drawGauge('#gauge-container-3', 100);
 drawGauge('#gauge-container-4', 100);
-}, 0);
-  
+}, 0);   
+
