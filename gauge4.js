@@ -81,7 +81,7 @@ function drawGauge(containerSelector, value) {
 .attr('dy', '0.35em')
 .attr('fill', textColor)
 .style('font-size', fontSize + 'px')
-.attr('transform', translate(${width/2}, ${height/2}));
+.attr('transform', 'translate(' + width/2 + ',' + height/2 + ')');
 
 let isAnimated = false;
 
