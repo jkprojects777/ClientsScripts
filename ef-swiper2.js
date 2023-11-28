@@ -1,14 +1,14 @@
 // Options
 const swiperOptions={
   slidesPerView: "auto",
+  spaceBetween:10,
   centeredSlides: true,
   mousewheel: false,
   autoHeight: false,
   forceToAxis: false,
   loop: true,
-  speed: 1200,
+  speed: 500,
   freeMode: false,
-  centeredSlides: true,
   centeredSlidesBounds: true,
   lazy: false,
   keyboard: {
