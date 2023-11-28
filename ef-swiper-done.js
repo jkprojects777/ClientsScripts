@@ -1,19 +1,25 @@
 // Options
 const swiperOptions={
-  slidesPerView: "auto",
-  spaceBetween:10,
-  centeredSlides: true,
   mousewheel: false,
   autoHeight: false,
   forceToAxis: false,
   loop: true,
-  speed: 500,
+  speed: 1200,
   freeMode: false,
+  centeredSlides: true,
   centeredSlidesBounds: true,
   lazy: false,
   keyboard: {
     enabled: true,
   },
+  breakpoints:{
+    0:{slidesPerView:1.2,spaceBetween:10},
+    484:{slidesPerView:2.2,spaceBetween:20},
+    708:{slidesPerView:3.2,spaceBetween:20},
+    1001:{slidesPerView:4.2,spaceBetween:20},
+    1262:{slidesPerView:5.2,spaceBetween:20},
+    1587:{slidesPerView:6.2,spaceBetween:20}
+  }
 };
 
 // Init all globals
@@ -40,11 +46,13 @@ const testiswiper=new Swiper(".cat8-cards",{
 // Testi custom
 
 const jobsswiper=new Swiper(".cat9-cards",{
+  slidesPerView:1.5,
   spaceBetween:10,
   mousewheel: false,
   autoHeight: false,
   forceToAxis: false,
   loop: true,
+  speed: 1200,
   freeMode: false,
   centeredSlides: true,
   centeredSlidesBounds: true,
