@@ -1,6 +1,6 @@
 function drawGauge(containerSelector, value, isYear = false) {
-  const backgroundColor = "#ffffff";
-  const textColor = "#e30e5d";
+  const backgroundColor = "rgba(0, 0, 0, 0.07)";
+  const textColor = "#ffffff";
 
   const container = d3.select(containerSelector);
   const width = container.node().getBoundingClientRect().width;
