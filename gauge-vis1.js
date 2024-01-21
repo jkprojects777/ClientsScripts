@@ -58,9 +58,9 @@ function drawGauge(containerSelector, value, isYear = false) {
     .attr("stop-color", d => d.color);
 
   const bar = svg.append('path')
-    .datum({endAngle: 0})
-    .attr('fill', 'url(#gradient)')
-    .attr('transform', `translate(${width/2}, ${height/2})`);
+  .datum({endAngle: 0})
+  .attr('fill', '#e30e5d') // Changez la couleur ici
+  .attr('transform', `translate(${width/2}, ${height/2})`);
 
   const textGradient = svg.append("defs")
     .append("linearGradient")
@@ -120,7 +120,7 @@ function drawGauge(containerSelector, value, isYear = false) {
       .tween('text', () => {
         const interpolate = d3.interpolate(0, value);
         return t => {
-          text.text(isYear ? Math.round(interpolate(t)) + ' ans' : Math.round(interpolate(t)) + '%');
+          text.text(isYear ? '2 ans' : Math.round(interpolate(t)) + '%'); // Changez le texte ici
         };
       });
   };
@@ -128,5 +128,5 @@ function drawGauge(containerSelector, value, isYear = false) {
 
 setTimeout(function() {
   drawGauge('#gauge-container-1', 80);
-  drawGauge('#gauge-container-2', 2, true);
+  drawGauge('#gauge-container-2', 100, true); // Changez la valeur ici
 }, 0);
