@@ -1,6 +1,6 @@
 function drawGauge(containerSelector, value) {
   const backgroundColor = "rgba(255, 255, 255, 0.07)";
-  const textColor = "url(#textGradient)";
+  const textColor = "#6c6efe";
 
   const container = d3.select(containerSelector);
   const width = container.node().getBoundingClientRect().width;
@@ -59,7 +59,7 @@ function drawGauge(containerSelector, value) {
 
   const bar = svg.append('path')
     .datum({endAngle: 0})
-    .attr('fill', 'url(#gradient)')
+    .attr('fill', '#6c6efe')
     .attr('transform', `translate(${width/2}, ${height/2})`);
 
   const textGradient = svg.append("defs")
