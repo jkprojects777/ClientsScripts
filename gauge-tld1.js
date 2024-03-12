@@ -1,5 +1,5 @@
 function drawGauge(containerSelector, value) {
-  const backgroundColor = "rgba(0, 0, 0, 0.07)";
+  const backgroundColor = "rgba(0, 0, 0, 0.20)";
   const textColor = "url(#textGradient)";
 
   const container = d3.select(containerSelector);
