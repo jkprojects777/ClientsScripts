@@ -42,7 +42,7 @@ const testiswiper=new Swiper(".cat8-cards",{
   autoplay: { delay: 3000, pauseOnMouseEnter: true },
 });
 
-// Testi custom
+// Job custom
 
 const jobsswiper=new Swiper(".cat9-cards",{
   slidesPerView:1.5,
@@ -66,3 +66,30 @@ const jobsswiper=new Swiper(".cat9-cards",{
 });
 
 $('.w-dyn-empty').parents('.swiper-comp.jobs').each(function(){ $(this).hide()})
+
+// Logos custom
+
+const logoswiper=new Swiper(".logo-slide",{
+  slidesPerView:1.5,
+  spaceBetween:10,
+  mousewheel: false,
+  autoHeight: false,
+  forceToAxis: false,
+  loop: true,
+  speed: 1200,
+  freeMode: false,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  lazy: false,
+  keyboard: {
+    enabled: true,
+  },
+  breakpoints:{
+    0:{slidesPerView:2.5,spaceBetween:10},
+    479:{slidesPerView:3.2,spaceBetween:20},
+    820:{slidesPerView:5.7,spaceBetween:20},
+    992:{slidesPerView:5.7,spaceBetween:20},
+    1200:{slidesPerView:7,spaceBetween:20}
+  },
+  autoplay: { delay: 250, pauseOnMouseEnter: false }
+});
